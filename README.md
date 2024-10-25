@@ -683,7 +683,7 @@ data = "EURUSD"
 
 [component.your-awesome-script]
 source = "target/wasm32-wasi/release/my_awesome_oracle.wasm"
-allowed_outbound_hosts = ["https://www.awesome-data-feed.com"]
+allowed_outbound_hosts = ["https://www.revolut.com"]
 [component.your-awesome-script.build]
 command = "cargo build --target wasm32-wasi --release"
 ```
@@ -738,7 +738,9 @@ If you need a new data feed for your application you can appended to
       "resources": {
         "cmc_id": 123456,
         "cmc_quote": "MyToken"
-      }
+      },
+      "value_type": "Numerical",
+      "aggregate_type": "Median"
     },
 ```
 
